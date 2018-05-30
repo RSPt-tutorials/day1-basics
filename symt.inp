@@ -1,0 +1,36 @@
+#************************************************************************
+# BCC Fe
+#************************************************************************
+# Lattice constant in a.u.:
+lengthscale
+  6.90
+
+# Lattice vectors (columns)
+latticevectors
+    0.000    0.500    0.500
+    0.500    0.000    0.500
+    0.500    0.500    0.000
+
+# Spin polarized
+spinpol
+
+# Muffin-tin Radius
+mtradii
+  3
+
+# Sites
+atoms
+1
+  0.000000  0.000000  0.000000  26 l up
+
+# maximal l to use for the expansion of the potential
+lmax
+  8
+
+# Fully relativistic
+# fullrel
+
+# Spin axis
+#spinaxis
+#  0.000000   0.000000   1.000000  c
+
