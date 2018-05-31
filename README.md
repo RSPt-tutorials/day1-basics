@@ -41,7 +41,7 @@ This tutorial contains:
 - `symt.inp`  (RSPt input file for bcc Fe)
 - folder `input` (compare your input setup with this help folder) 
 - folder `lsda` (compare your converged DFT calulations with this help folder)
-- folder `lsda-spectrum` (compare your DOS with the DOS in this help folder) 
+- folder `lsda-dos` (compare your DOS with the DOS in this help folder) 
 - `basis_set_visualization.png` (figure schematically visualizing the basis functions in RSPt)
 
 #### 1. Preparations
@@ -236,7 +236,7 @@ Either use an interactive session or submit a job.
 
 To request an interactive session on the Rackham computer with 10 processors, type:
 ```bash
-interactive -n 10 -t 00:15:00  --qos=short  -A snic2017-11-55
+interactive -n 10 -t 00:15:00  --qos=short  -A g2018015
 ```
 Once granted access, run RSPt by executing the `rspt` binary:
 ```bash
@@ -258,7 +258,7 @@ The latter will run 20 DFT iterators or stop if the converge parameter `fsq` bec
 A submit jobscript should look something like:
 ```bash
 #!/bin/bash -l
-#SBATCH -A snic2017-11-55
+#SBATCH -A g2018015
 #SBATCH -p core --qos=short
 ##SBATCH -p devel
 #SBATCH -n 10
@@ -280,7 +280,8 @@ There are a few things to check to make sure the simulation is reliable:
 - The second number below the `Fourier transform parameters` keyword should be equal to `6`.
 - The `leakage` value should be less than 0.1.
 - The muffin-tin value corresponding to the keyword `2S` should be around 0.95.
-
+- The total energy is converged. To see how total energy and fsq have changed during the iterations type: 
+  ```grep 'e  ' hist```
 
 #### 10. Generate DOS 
 

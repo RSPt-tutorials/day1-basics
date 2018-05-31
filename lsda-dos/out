@@ -1,0 +1,467 @@
+                        MPI RSPT
+ RSPt version number:         rspt.6.0102221136
+ Git hash of master, current: 4f9667e   4f9667e
+ compiler flags             : -O2 -assume underscore                                  
+
+                   MPI Task Configuration
+ Tasks in k-point parallelization:                  10
+ Tasks in intra-k-point parallelization:             1
+ Total MPI tasks:                                   10
+                   FFT Configuration
+                  single-threaded FFTW3
+ 
+ Readin: Please, set the env variable
+  RSPT_SCRATCH to point to your scratch directory.
+
+
+
+                           RSPT
+                        OUTPUT for :
+ LABEL                                                          
+      time             date             host
+     16.57         31 May 2018          r485.uppmax.uu.se
+
+c Parameters (para.glo):
+      integer     ncqpar, ntppar, nclpar, nlmpar, nsdpar, nthpar
+     >          , nchpar, norpar, nrppar, nktpar, nttpar, nespar
+     >          , ntlpar, nylpar, optpar, nptpar, ntepar
+      parameter (
+     >     ncqpar=         N/A
+     >   , ntppar=     1, nclpar=     1
+     >   , nlmpar=     8, nsdpar=     2
+     >   , nthpar=     4, nchpar=    12
+     >   , norpar=    12, nrppar=   539
+     >   , nktpar=    30, nttpar=     0
+     >   , nespar=     2, ntlpar=     3
+     >   , nylpar=    48, optpar=  5000
+     >          )
+      parameter (nptpar = nrppar + 100, ntepar = ntlpar * nespar)
+c fix these
+      integer     nftpar, nprpar, nkwpar, newpar, nutpar
+      parameter (nftpar=512, nprpar=9, nkwpar=1, newpar=1, nutpar=1)
+
+readin: DMFT requires that prnt(7) and prnt(8) are set to T
+
+  ntype    lm  lmwp     valence
+      1     8     8        16.0
+       warpin      warpmt        pmix
+            T           T       0.050
+       fulrel      spipol  iterations
+            F           T           1
+ control variables :
+     +    1    +    2    +    3    +    4    +    5    +    6    +    7
+ FFTFFFTTTFFFFFFFFFFFTFTFFFFFFFFTFFFFTFFFFFFFTFFFFFFFFFFFFFFFTFFFFFTTFFFF
+
+      Exchange-Correlation function ...
+         Hedin-Lundqvist: vonBarth-Hedin interpolation, RPA scaling     
+ *** info: readin: Setting dE/W to 24.
+
+    ntl     .   nes     .     .           .           .   log(epst)
+      3     1     2     1     1         0.0         0.0     -38.000
+   tail      ( t )**2     ( tR )**2         .     ?  .  .  .
+      1    -0.1000000    -2.9376400     0.000     0  1  0  1
+      2    -2.3000000   -67.5657200     0.000     0  1  0  1
+      3    -1.5000000   -44.0646000     0.000     0  1  0  1
+
+ Bravais lattice basis / 5.41999999 ... R(i,j) = R_i(j)
+ -.500000000000000  .500000000000000  .500000000000000
+  .500000000000000 -.500000000000000  .500000000000000
+  .500000000000000  .500000000000000 -.500000000000000
+
+ Reciprocal lattice basis * 5.41999999 / twopi ... G(i,j) = G_i(j)
+  .000000000000000  1.00000000000000  1.00000000000000
+  1.00000000000000  .000000000000000  1.00000000000000
+  1.00000000000000  1.00000000000000  .000000000000000
+
+ unit cell volume: 
+       .500000000000000 * 5.41999999**3
+       .119366207318921 * 5.41999999**3 * 4pi/3
+
+ Procedures:
+ Diagonalization    ... 2
+
+ Brillouin zone integration ...
+
+ Brillouin zone vectors :  1 point sets
+          set        nkbz       iwsum
+            1          30         432
+
+     Integration method:
+     Special points with Fermi smearing ...
+          kT(mRy)     Ecut/kT
+            0.500      24.000
+      Spin axis ...
+                 x                 y                 z
+  0.00000000000000  0.00000000000000  0.00000000000000
+             alpha              beta             gamma
+  0.00000000000000  0.00000000000000  0.00000000000000
+          Field strength        Field star   Mix Ratio
+                  0.0000                 1    0.100000
+ Type     Z     e   Sites   Harmonics
+    1  26.0 10.00       1           4
+            S       Sco/S       Sex/S       Sws/S     ScoFlag
+    2.2313925   1.1959613   1.0000000   1.0000000           p
+                       dx                r1   Nmt
+      2.5000000000000E-02   3.215993629E-06   539
+ G*t/2pi:                 1                   2                   3
+        0.0000000000000E+00 0.0000000000000E+00 0.0000000000000E+00
+       Core    Levels :   n           k         occ        flag
+                          1          -1       2.000           0
+                          2          -1       2.000           0
+                          2           1       2.000           0
+                          2          -2       4.000           0
+                          3          -1       0.000           0
+                          3           1       0.000           0
+                          3          -2       0.000           0
+      Valence levels:
+           e  l  spin  n  i
+           1  0  down  4 20
+                   up  4 20
+              1  down  4 21
+                   up  4 21
+              2  down  3 -1
+                   up  3 -1
+              3  down  4  0
+                   up  4  0
+              4  down  5  0
+                   up  5  0
+              5  down  6  0
+                   up  6  0
+              6  down  7  0
+                   up  7  0
+              7  down  8  0
+                   up  8  0
+              8  down  9  0
+                   up  9  0
+           2  0  down  3 -1
+                   up  3 -1
+              1  down  3 -1
+                   up  3 -1
+              2  down  3  0
+                   up  3  0
+              3  down  4  0
+                   up  4  0
+              4  down  5  0
+                   up  5  0
+              5  down  6  0
+                   up  6  0
+              6  down  7  0
+                   up  7  0
+              7  down  8  0
+                   up  8  0
+              8  down  9  0
+                   up  9  0
+
+ Valence Basis Functions.
+        Bases    MD    EV
+           12    60    42
+        t  a  l  e     tail         
+        1  1  0  1        1
+        1  1  0  1        2
+        1  1  0  1        3
+        1  1  1  1        1
+        1  1  1  1        2
+        1  1  1  1        3
+        1  1  2  1        1
+        1  1  2  1        2
+        1  1  0  2        1
+        1  1  0  2        2
+        1  1  1  2        1
+        1  1  1  2        2
+
+ unit cell volume:  79.6100440000000
+    radius of V/N:  2.66865900
+       muffin tins      interstitial   v(I)/vcell
+  46.5389406224084  33.0711033775915  .415413705556946
+ FT initialization done
+
+ Shift unit cell vectors. In Wyckof coordinates, :
+     a                dx                dy                dz
+
+ New unit cell vectors in Wyckoff coordinates:
+     a                 x                 y                 z
+     1  .000000000000000  .000000000000000  .000000000000000
+ Reciprocal lattice read from gvector
+
+ Reciprocal lattice:
+       Group: 48      Grid(-Mi:Mi):  M = (  9,  9,  9)
+       stars     vectors               max * S_a
+         148        4579         55.686019073042
+ TIME: RLGEN:      0.005m in,      0.000m added,      0.005m total
+
+ setchi: this lattice has inversion symmetry
+         cut on interstitial potential:  0.1110223024625E-15
+ TIME: SETCHI:      0.005m in,      0.000m added,      0.005m total
+
+ Bravais lattice:
+       Group: 48      Grid(-Mi:Mi):  M = (  9,  9,  9)
+       stars     vectors               max / S_a
+         125        3439         18.278843356138
+ TIME: BLGEN:      0.005m in,      0.000m added,      0.005m total
+
+ Nearest neighbors: min_{b+R} |b+R-a|, |b+R-a| < 1.1 (min|R|= 4.6938577)
+  ta  tb         d/L        2S/d   d(au)    d(A)    a    b
+   1   1 .8660254037 .9507712454 4.69385 2.48388    1    1
+ TIME: COUNTN:      0.005m in,      0.000m added,      0.005m total
+ TIME: ORDINSTEP:      0.005m in,      0.000m added,      0.005m total
+ TIME: INIT_GAUNT:      0.005m in,      0.000m added,      0.005m total
+ Readpot:
+       2 spins in the input potential
+       4 harmonics in the input potential for type       1
+     148 stars in the input potential
+ TIME: GETPOT:      0.005m in,      0.000m added,      0.005m total
+ TIME: GETEP:      0.005m in,      0.000m added,      0.005m total
+
+ Muffin tin energies
+
+   type         smt   nmt         sws   nws
+      1   2.2313925   539   2.2313925   539
+   spin           Q          xl        vinf
+      1   0.0000000   0.4924712   0.1100289
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  4  .237912683  .237912683  .919022850 -1.00000000  2.63472811 -6.17115176
+      3 -5.54572444 -5.54572444 -5.51193029 -6.17115176 -5.51193029 -6.17115176
+   1  4  .406501762  1.08439535  1.85008055 -1.09162695  3.39393705 -5.01460465
+      3 -3.17964384 -3.13687660 -3.05119109 -5.01460465 -3.05119109 -5.01460465
+   2  3 -.611702954  .382979488  .683373558 -1.79438008
+   3  4 -.065128816  3.33722194  4.31374403 -1.37268063
+   4  5  .122788847  5.80823151  7.04257883 -1.43523250
+   5  6  .264725617  8.65523326  10.1174235 -1.50579273
+   6  7  .387485498  11.9192034  13.6010485 -1.57645882
+   7  8  .500129564  15.6095400  17.5085125 -1.64571775
+   8  9  .606746044  19.7286445  21.8444268 -1.71322050
+   spin           Q          xl        vinf
+      2   0.0000000   0.5082603   0.1446832
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  4  .178194241  .178194241  .853013509 -1.00000000  2.56110501 -6.25437678
+      3 -5.72146911 -5.72146911 -5.68949584 -6.25437678 -5.68949584 -6.25437678
+   1  4  .344084950  1.02005295  1.78268143 -1.09438822  3.33350956 -5.11861085
+      3 -3.34263301 -3.30342550 -3.22290790 -5.11861085 -3.22290790 -5.11861085
+   2  3 -.681108259  .256934261  .543147266 -1.91240466
+   3  4 -.096593788  3.28744065  4.25742614 -1.37817828
+   4  5  .098115704  5.76743242  6.99751626 -1.43871986
+   5  6  .244082239  8.61942467  10.0783526 -1.50845000
+   6  7  .369598911  11.8868676  13.5660567 -1.57862312
+   7  8  .484259892  15.5798445  17.4765777 -1.64754462
+   8  9  .592416740  19.7010557  21.8149061 -1.71479849
+
+      Energy parameters ...                          energy reset
+                                                     | npr(mt) .ne. npr
+                                                     | | e < e1(ws)
+        t  e  l  spin  n mt           E       D(mt)  | | | e > e2
+        1  1  0  down  4  4   2.6347281      -6.171  * - - *
+                   up  4  4   2.5611050      -6.254  * - - *
+              1  down  4  4   3.3939371      -5.015  * - - *
+                   up  4  4   3.3335096      -5.119  * - - *
+              2  down  3  3   0.6833736      -1.794  * - - -
+                   up  3  3   0.5431473      -1.912  * - - -
+              3  down  4  4   0.6196915       2.342  - - * -
+                   up  4  4   0.5659319       2.355  - - * -
+              4  down  5  5   0.6390815       3.523  - - * -
+                   up  5  5   0.5874892       3.536  - - * -
+              5  down  6  6   0.6666482       4.613  - - * -
+                   up  6  6   0.6122271       4.626  - - * -
+              6  down  7  7   0.6588960       5.681  - - * -
+                   up  7  7   0.6128649       5.691  - - * -
+              7  down  8  8   0.6757377       6.722  - - * -
+                   up  8  8   0.6126282       6.736  - - * -
+              8  down  9  9   0.6279561       7.769  - - * -
+                   up  9  9   0.5950569       7.774  - - * -
+           2  0  down  3  3  -5.5119303      -6.171  * - - -
+                   up  3  3  -5.6894958      -6.254  * - - -
+              1  down  3  3  -3.0511911      -5.014  * - - -
+                   up  3  3  -3.2229079      -5.118  * - - -
+              2  down  3  3   0.3530120       0.102  - - * -
+                   up  3  3   0.2267360       0.111  - - * -
+              3  down  4  4   0.2731579       2.566  - - * -
+                   up  4  4   0.1810379       2.604  - - * -
+              4  down  5  5  -0.4104913       4.025  - - * -
+                   up  5  5  -0.4371964       4.026  - - * -
+              5  down  6  6  -1.3841121       5.405  - - * -
+                   up  6  6  -1.2816195       5.360  - - * -
+              6  down  7  7  -1.9837171       6.552  - - * -
+                   up  7  7  -1.8400825       6.501  - - * -
+              7  down  8  8  -2.2867662       7.579  - - * -
+                   up  8  8  -2.3200790       7.584  - - * -
+              8  down  9  9  -2.1956128       8.502  - - * -
+                   up  9  9  -1.9845023       8.445  - - * -
+ TIME: setene:      0.005m in,      0.000m added,      0.005m total
+
+ Interstitial kinetic energy parameters
+  3 energies
+     n           kappa^2
+     1       -.100000000
+     2       -2.29999999
+     3       -1.50000000
+ TIME: SENTLS:      0.005m in,      0.000m added,      0.005m total
+
+      Radial functions ...
+        t  l  e  spin  n           E           u         ru'
+        1  0  1  down  4  2.63472811 -.279043406  1.72201920
+                   up  4  2.56110501 -.274691286  1.71802280
+              2  down  3 -5.51193029  .031500581 -.194376376
+                   up  3 -5.68949584  .030460687 -.190494306
+           1  1  down  4  3.39393705  .329401226 -1.65181692
+                   up  4  3.33350956  .323713800 -1.65696497
+              2  down  3 -3.05119109 -.055133120  .276444883
+                   up  3 -3.22290790 -.052898345  .270740417
+           2  1  down  3  .683373558  .206796642 -.371071776
+                   up  3  .543147266  .192719785 -.368558217
+              2  down  3  .353011980  .368951126  .037735258
+                   up  3  .226736006  .355410261  .039624805
+           3  1  down  4  .619691475  .822703580  1.92700184
+                   up  4  .565931862  .822292542  1.93687573
+              2  down  4  .273157912  .842777012  2.16274788
+                   up  4  .181037910  .844652696  2.19925822
+           4  1  down  5  .639081489  .947641860  3.33832245
+                   up  5  .587489230  .947860529  3.35142557
+              2  down  5 -.410491345  .987706288  3.97547859
+                   up  5 -.437196363  .987084438  3.97426968
+           5  1  down  6  .666648170  1.04749690  4.83181238
+                   up  6  .612227102  1.04799277  4.84839132
+              2  down  6 -1.38411205  1.10580073  5.97704809
+                   up  6 -1.28161950  1.10210370  5.90771949
+           6  1  down  7  .658895972  1.13609961  6.45453517
+                   up  7  .612864861  1.13642498  6.46742270
+              2  down  7 -1.98371706  1.19616651  7.83696224
+                   up  7 -1.84008245  1.19243396  7.75247111
+           7  1  down  8  .675737713  1.21603457  8.17411033
+                   up  8  .612628195  1.21672528  8.19613753
+              2  down  8 -2.28676624  1.27210364  9.64168881
+                   up  8 -2.32007904  1.27222127  9.64909026
+           8  1  down  9  .627956124  1.29125141  10.0321216
+                   up  9  .595056907  1.29137617  10.0395337
+              2  down  9 -2.19561281  1.33696612  11.3665557
+                   up  9 -1.98450226  1.33330361  11.2601139
+        t  l  e  spin  n  <du/de**2>       du/de   r(du/de)'
+        1  0  1  down  4  .029995719  .160410749  .616188091
+                   up  4  .030681787  .162192819  .617136859
+              2  down  3  2.02231232 -1.37533677 -5.73912345
+                   up  3  2.07836168 -1.40162085 -5.94592185
+           1  1  down  4  .024937336 -.144716471 -.634980410
+                   up  4  .025552024 -.146663442 -.633868315
+              2  down  3  1.21716403  .983478589  3.19813963
+                   up  3  1.25273642  1.00368736  3.33586783
+           2  1  down  3  .513805270 -.548937325 -1.18248121
+                   up  3  .548569308 -.570897329 -1.23402443
+              2  down  3  .330296672 -.430319809 -1.25882544
+                   up  3  .361897316 -.453963945 -1.31171471
+           3  1  down  4  .003627101 -.059429559 -.683933858
+                   up  4  .003689465 -.059785361 -.685826985
+              2  down  4  .003222776 -.056469593 -.676665280
+                   up  4  .003232293 -.056461697 -.677581815
+           4  1  down  5  .001303994 -.040004850 -.613831413
+                   up  5  .001312443 -.040082155 -.614515681
+              2  down  5  .001046179 -.036445496 -.600395706
+                   up  5  .001057225 -.036578363 -.601264194
+           5  1  down  6  .000639142 -.030323155 -.567683708
+                   up  6  .000640577 -.030335175 -.567949874
+              2  down  6  .000470438 -.026690249 -.549489981
+                   up  6  .000481797 -.026941368 -.551002196
+           6  1  down  7  .000358111 -.024212291 -.531991531
+                   up  7  .000358703 -.024219587 -.532154896
+              2  down  7  .000264402 -.021367310 -.514583291
+                   up  7  .000270237 -.021551586 -.515880317
+           7  1  down  8  .000219388 -.020024403 -.503095267
+                   up  8  .000219169 -.020010497 -.503077860
+              2  down  8  .000166953 -.017908483 -.487946140
+                   up  8  .000167199 -.017914693 -.488052057
+           8  1  down  9  .000142002 -.016921237 -.478477918
+                   up  9  .000142165 -.016925582 -.478562343
+              2  down  9  .000114478 -.015502280 -.466907390
+                   up  9  .000116656 -.015617992 -.467932429
+ TIME: xmt:      0.005m in,      0.000m added,      0.005m total
+ TIME: CONVOPOT:      0.005m in,      0.000m added,      0.005m total
+
+ splitting parameters for structure functions.
+        nstgm        gcut nstrm        rcut   lmx          t2         eta
+           15   5.9110857    18  17.7706584    10  -0.1000000   0.6052192
+                                                   -2.3000000   0.6266272
+                                                   -1.5000000   0.6273977
+  EIGEN: Allocating arrays for the diagonalization.
+  EIGEN: Starting the k-point loop.
+ TIME: EIGEN:      0.005m in,      0.002m added,      0.007m total
+
+ Cpulog for EIGEN:
+             FC+VI           FC junk              STRC           O+T Int
+            .00073            .00000            .00005            .00000
+            O+H Mt              Diag               <I>
+            .00057            .00008            .00000
+
+      Electron entropy
+         T   =  78.9466932 K
+         S/k =  .031376792
+         N   =  16.0000000
+
+ Eigenvalue sum: -25.6011967424958
+ fermi energy =  7.1511983989573E-01
+        D(ef) =  2.0873402691453E+01
+ eigenvalues within   12.0000000 mRy of E Fermi ...     5
+
+ TIME: FERMI:      0.007m in,      0.000m added,      0.007m total
+ TIME: EIGEN0:      0.005m in,      0.002m added,      0.007m total
+ 
+ 
+ +---------------------------- BRIANNA --------------------------------+
+ 
+ ***********************************************
+      Initialization of the DMFT code
+ ***********************************************
+ 
+ Readin: Setting the temperature to   5.000000000000000E-004
+ Readin: Changing mixing%sigdiff_factor to 0d0. The chemical potential will be
+         converged before a new self-energy is calculated. To only run the solver once
+         per csc-iteration, set sig_acc to a high value.
+ 
+ ***********************************************
+     Formated and processed input data
+ ***********************************************
+ matsubara
+   1024    60    60    10                        ! nmats nmats_head nmats_log nmats_tail
+ 
+ energymesh
+   1001  -1.00   1.00 0.010                      ! nemesh emin emax eim
+ 
+ inputoutput
+   T  F                                          ! readsig csc
+ 
+ convergency
+  1.00E-06 1.00E-05   0   0                      ! ndelta sigma_acc maxiter maxsolveriter
+
+ projection
+   2                                             ! basis_type
+
+ mixing
+   3  0.15000  0.00000                           ! mix_method max_slope sigdiff_factor
+
+ spectrum
+ Dos Sproj
+
+ cluster                                         ! ID: 0102010100-obs
+   1                                             ! ntot [eV] [UJ] [Cf] [irrXX]
+   1  2  1  1  0                                 ! id
+
+
+ ***********************************************
+      Initialization of cluster 0102010100-obs    
+ ***********************************************
+ 
+ ***********************************************
+      Spectral properties
+ ***********************************************
+ 
+ Setting sigma=0! 
+ 
+ +---------------------------- END OF BRIANNA -----------------------------+
+ 
+ 
+ TIME: DMFT:      0.007m in,      0.017m added,      0.024m total
+ ***main: Stop before density.
+
+ TIME: rspt:      0.005m in,      0.020m added,      0.024m total
+
+ Cpulog for DIAGONAL:
+             Total          Cholesky
+
+            .00008            .00000
+

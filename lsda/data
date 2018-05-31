@@ -10,7 +10,7 @@ fftffffftffffffffffftftfffffffftfffftffffffftffffffffffffffftfffffttffff
      0
  (/ 2f12.0, i6)
        W(Ry)        dE/W     .
-      0.0005        320.     0
+      0.0005          4.     0
  (i6)
      1 placeholder for obsolete panel index
  (/ i6, 3x, 3i1, i6, 2f6.0, f12.0 /)
