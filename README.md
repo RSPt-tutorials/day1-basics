@@ -306,5 +306,27 @@ cluster
 1 0              ! ntot udef [nsites]
 1 2 1 1 0        ! t l e site basis[cubic harm] U J or F0 F2 F4 (F6)
 ```
-Now just execute `rspt` once to obtain DOS and PDOS.
+Now just execute `rspt` once to obtain DOS and PDOS, stored in the following files:
+- `dos.dat` 
+- `pdos-0102010100-obs.dat` 
+To plot the Fe 3d PDOS in using gnuplot, type:
+```bash 
+gnuplot
+```
+and then the gnuplot command:
+```gnuplot
+p "pdos-0102010100-obs.dat" w l
+```
+To plot using Python, type:
+```bash
+ipython
+```
+and then the Python commands:
+```python
+import matplotlib.pylab as plt 
+import numpy as np
+x = np.loadtxt("pdos-0102010100-obs.dat")
+plt.plot(x[:,0],x[:,1])
+plt.show()
+```
 
