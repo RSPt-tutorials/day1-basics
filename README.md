@@ -34,6 +34,16 @@ symt -all
 many of the files needed to run a simulation is created. Below follows a step-by-step description of how to setup a simulation of bcc Fe.
 
 ## bcc Fe
+
+#### 0. Info of provided files and folders
+This tutorial contains:
+- This `README.md` file
+- `symt.inp`  (RSPt input file for bcc Fe)
+- folder `input` (compare your input setup with this help folder) 
+- folder `lsda` (compare your converged DFT calulations with this help folder)
+- folder `lsda-spectrum` (compare your DOS with the DOS in this help folder) 
+- `basis_set_visualization.png` (figure schematically visualizing the basis functions in RSPt)
+
 #### 1. Preparations
 Before using RSPt, make sure the same modules are loaded as when compiling RSPt.
 E.g. on Rackham, type:
@@ -274,7 +284,7 @@ There are a few things to check to make sure the simulation is reliable:
 
 #### 10. Generate DOS 
 
-To generate density of states (DOS) and projected DOS (PDOS), one can provide a `green.inp` file.
+To generate density of states (DOS) and projected DOS (PDOS) for e.g. the 3d orbitals, one can provide a `green.inp` file.
 In our case its content can be:
 ```bash
 matsubara
