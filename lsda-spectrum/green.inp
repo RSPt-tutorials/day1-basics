@@ -1,0 +1,21 @@
+matsubara
+1024  60  60  10   ! nmats head body tail
+
+convergency
+1d-6 1d-5  0  0    ! ndelta sigma_acc maxiter maxsolveriter
+
+energymesh
+1001 -1.0 1.0 0.01 
+
+projection
+2                  ! 1: MT, 2: ORT
+
+spectrum
+Dos Pdos
+
+cluster
+1 0              ! ntot udef [nsites]
+1 2 1 1 0        ! t l e site basis[cubic harm] U J or F0 F2 F4 (F6)
+
+
+

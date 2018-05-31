@@ -1,0 +1,15 @@
+ History
+    Start runs aprun -n 90 ./rspt 1.00e-12 500 on beskow-login4.pdc.kth.se, Wed May 30 11:51:53 2018
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   22 3.85E-13 ( 2.98E-11)     2.08334454       -2,541.085 258 780 0
+@      79.6100440 -2541.08525877998
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 120 44     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0000002         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+    end runs, Wed May 30 11:54:42 2018
+
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
