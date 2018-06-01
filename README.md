@@ -5,7 +5,7 @@ Introduction to RSPt and bcc Fe
 
 #### Manual
 the manual of RSPt is stored in the `documentation/manual/` folder in RSPt's repository.
-To obtain the manual in pdf format one needs to type:
+To obtain the manual in pdf format one needs to go to that directory and type:
 ````
 latex manual.tex
 ````
