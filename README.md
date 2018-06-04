@@ -169,7 +169,7 @@ The rows 9-13 in the `data` file, about the k-integration, should now look like:
       0.0005          4.     0       
 ```
 
-We also want to modify the tail-energies so that all tail-energies are negative. (This gives more robust calculations it decreaces the condition number of the overlap matrix.) Change the first tail-energy from 0.3 to -1 on row 21 such that rows 20-23 look:
+We also want to modify the tail-energies so that all tail-energies are negative. (This gives more robust calculations it decreaces the condition number of the overlap matrix.) Change the first tail-energy from 0.3 to -0.1 on row 21 such that rows 20-23 look:
 ```
  (f12.0, f5.0, i1, i3, 3i2, l3, f6.0, i3, 6f12.0)
         -0.1   .01  0 1 0 1  f    .0  0          .0       
