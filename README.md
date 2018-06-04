@@ -87,7 +87,7 @@ Now many the folders `atom`, `bin`, `bz`, `dta` and some files should exist.
 Starting from the main diretory:
 ```
 cd atom
-make atom
+make
 ```
 This will generate an atomic density which will be used as a starting point for the DFT calculations.
 
