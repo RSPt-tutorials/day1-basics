@@ -27,16 +27,16 @@ An existing calculating also contains:
 
 When setting up a calculation from scratch, one starts with *one* file called `symt.inp`.
 It contains the basic information such as lattice vectors, lattice parameter and atom positions.
-By typing: 
-```bash
-symt -all 
-```
-many of the files needed to run a simulation is created. Below follows a step-by-step description of how to setup a simulation of bcc Fe.
+From this file many of the files needed to run a simulation is generated. Below follows a step-by-step description of how to setup a simulation of bcc Fe.
 
 ## bcc Fe
 
-#### 0. Info of provided files and folders
-This tutorial contains:
+#### 0. Download tutorial from github
+Download the tutorial from github by typing:
+```
+git clone https://github.com/RSPt-tutorials/day1-basics.git
+```
+This will download the following tutorial content:
 - This `README.md` file
 - `symt.inp`  (RSPt input file for bcc Fe)
 - folder `input` (compare your input setup with this help folder) 
