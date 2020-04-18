@@ -298,7 +298,7 @@ energymesh
 1001 -1.0 1.0 0.01
 
 projection
-2                  ! 1: MT, 2: ORT
+1                  ! 1: MT, 2: ORT
 
 spectrum
 Dos Pdos
